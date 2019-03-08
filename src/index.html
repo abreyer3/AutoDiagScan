@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nearby Auto Shops</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 70%;
+        margin: 4;
+        padding: 4;
+      }
+    </style>
+  </head>
+  <body background="OrangeBackground2.png">
+  <p>.</p><p>.</p><p>.</p><p>.</p>
+    <div id="map"></div>
+    <script>
+      var map;
+      function initMap() {
+        var myLatLng = {lat: 41.8706651, lng: -87.6490844};
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 41.8706651, lng: -87.6490844},
+          zoom: 15
+        });
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'My location'
+        });
+        
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjg1ytm_HiKvu2B0Jwj3qECgEhKmcnmUM&callback=initMap"
+    async defer></script>
+  </body>
+</html>
